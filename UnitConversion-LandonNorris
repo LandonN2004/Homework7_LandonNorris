@@ -1,0 +1,29 @@
+Landon Norris
+Homework 7
+MAE3403
+class UC:
+    """Simple unit conversion helpers for the steam calculator."""
+
+    # pressure
+    bar_to_psi = 14.5037738
+    psi_to_bar = 1.0 / bar_to_psi
+
+    # energy
+    kJperkg_to_btuperlb = 0.429922614
+    btuperlb_to_kJperkg = 1.0 / kJperkg_to_btuperlb
+
+    # entropy
+    kJperkgC_to_btuperlbF = 0.238845897
+    btuperlbF_to_kJperkgC = 1.0 / kJperkgC_to_btuperlbF
+
+    # specific volume
+    m3perkg_to_ft3perlb = 16.0184634
+    ft3perlb_to_m3perkg = 1.0 / m3perkg_to_ft3perlb
+
+    @staticmethod
+    def C_to_F(T):
+        return T * 9.0 / 5.0 + 32.0
+
+    @staticmethod
+    def F_to_C(T):
+        return (T - 32.0) * 5.0 / 9.0
